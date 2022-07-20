@@ -249,6 +249,7 @@ function obtenerSaludo(nombre) {
   return "Hola" + nombre + "!";
   
   
+  
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
