@@ -294,32 +294,26 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  var nuevoarray=[];
-  var suma= numero ; 
-  var aux= aux +1 ;
+  var miarray= [];
+  var aux= 1;
+  var acc= numero; 
 
+       for(var i= 1; i < 10; i++){
+        acc= acc + 2; 
+        if(acc === aux){break;}
 
-  for(var i= 0; i< 10; i++){
-    if(suma= suma + 2){
-
-      if (suma === aux) {break;} 
-        aux= aux + 1; 
-      nuevoarray.push(suma)
-
-    }
-    
-    if (suma === aux) return "Se interrumpió la ejecución"
-
-  }
-       
-      
-    return nuevoarray;
+          aux= aux + 1;
+          miarray.push(acc)
         
-  }
-    
-    
-    
-       
+        }      
+        if(aux === acc) return "Se interrumpió la ejecución"; 
+
+
+           return miarray;     
+       } 
+
+
+  
   
 
 function continueStatement(numero) {
