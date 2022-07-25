@@ -329,11 +329,11 @@ function continueStatement(numero) {
   var acc = numero; 
 
        for( var i = 0; i < 10; i++) {
-          
-        acc = acc + 2; 
-          
+                
           if ( i === 5 ){ continue; }
-         
+
+          acc = acc + 2;
+          
           miarray.push(acc)
         
         }      
