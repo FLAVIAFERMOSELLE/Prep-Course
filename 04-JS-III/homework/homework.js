@@ -298,7 +298,7 @@ function breakStatement(numero) {
   var aux= 1;
   var acc= numero; 
 
-       for(var i= 1; i < 10; i++){
+       for(var i= 0; i < 10; i++){
         acc= acc + 2; 
         if(acc === aux){break;}
 
@@ -323,7 +323,28 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-}
+  
+  var miarray= [];
+  
+  var acc = numero; 
+
+       for( var i = 0; i < 10; i++) {
+          
+        acc = acc + 2; 
+          
+          if ( i === 5 ){ continue; }
+         
+          miarray.push(acc)
+        
+        }      
+          return miarray;     
+       } 
+
+
+
+
+
+
 
 
 // No modificar nada debajo de esta línea
