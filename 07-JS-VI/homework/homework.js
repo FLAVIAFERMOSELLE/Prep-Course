@@ -1,20 +1,21 @@
 // Do not change any of the function names
 
-const MarkdownIt = require("markdown-it");
+
 
 function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-  var letraminuscula = nombre[0].ToUppercase;
-  var letramayuscula = nombre.Slice(1);
-   
-  return letraminuscula + letramayuscula;
+
+  var letrasmayusculas = nombre[0].toUpperCase()
+  var letrasminusculas = nombre.slice(1)
+  return letrasmayusculas + letrasminusculas
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
-  //Tu código:
+    //Tu código:
+      cb ();
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -22,7 +23,7 @@ function operacionMatematica(n1, n2, cb) {
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
 
-
+   return cb(n1,n2);
 
 
 }
@@ -43,6 +44,12 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+
+ array.forEach(function(valores){ 
+  cb(valores) });
+
+
+
 }
 
 function map(array, cb) {
@@ -50,13 +57,30 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+var nuevoarray= array.map(function(valor) {
+ return cb(valor);});
+  return nuevoarray; 
+
+
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+ var elementosfiltrados = array.filter(function(elementos){
+  if ( elementos[0] === "a"){
+    return elementos}
+    
+
+  } ); return elementosfiltrados; 
+
+
 }
+
+
+
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------
